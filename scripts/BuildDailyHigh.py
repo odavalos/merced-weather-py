@@ -49,13 +49,13 @@ fig, ax = plt.subplots(figsize=(8, 4))
 max_temp = daily_summary_stats[daily_summary_stats['name'] == 'TMAX']
 
 # Plot the ribbons for various percentiles
-ax.fill_between(max_temp['day_of_year'], max_temp['min_value'], max_temp['x5'], color='#979C7F')
-ax.fill_between(max_temp['day_of_year'], max_temp['x5'], max_temp['x20'], color='#B09C6F')
-ax.fill_between(max_temp['day_of_year'], max_temp['x20'], max_temp['x40'], color='#AF8B61')
-ax.fill_between(max_temp['day_of_year'], max_temp['x40'], max_temp['x60'], color='#C96E47')
-ax.fill_between(max_temp['day_of_year'], max_temp['x60'], max_temp['x80'], color='#D84B2A')
-ax.fill_between(max_temp['day_of_year'], max_temp['x80'], max_temp['x95'], color='#C41305')
-ax.fill_between(max_temp['day_of_year'], max_temp['x95'], max_temp['max_value'], color='#990100')
+ax.fill_between(max_temp['day_of_year'], max_temp['min_value'], max_temp['x5'], color='#FDDBC7')
+ax.fill_between(max_temp['day_of_year'], max_temp['x5'], max_temp['x20'], color='#F4A582')
+ax.fill_between(max_temp['day_of_year'], max_temp['x20'], max_temp['x40'], color='#D6604D')
+ax.fill_between(max_temp['day_of_year'], max_temp['x40'], max_temp['x60'], color='#B2182B')
+ax.fill_between(max_temp['day_of_year'], max_temp['x60'], max_temp['x80'], color='#D6604D')
+ax.fill_between(max_temp['day_of_year'], max_temp['x80'], max_temp['x95'], color='#F4A582')
+ax.fill_between(max_temp['day_of_year'], max_temp['x95'], max_temp['max_value'], color='#FDDBC7')
 
 # Plot the line for this year's data
 ax.plot(this_year['day_of_year'], this_year['TMAX'], color='black', alpha=0.75, label=f'{year_to_plot}')
